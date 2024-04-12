@@ -13,25 +13,25 @@
     
     <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
-    <!-- some links to put ar.js and a core for ar experience , not in use for now -->
+    <!-- some links to put ar.js and a core for ar experience -->
     <script src="https://cdn.jsdelivr.net/npm/ar.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   </head> 
 <body>
   <div id="card">
     <!-- Put code to make interactive 3D content on  site: -->
-    <model-viewer src="./3d models/Heart2.gltf"
-                  alt="A 3D model of an Heart"
+    <model-viewer src="./3d models/heart2/Heart2.gltf"
+                  alt="A 3D model of a Brain"
                   shadow-intensity="1"
                   camera-controls
                   auto-rotate ar>
     </model-viewer>
     <section class="attribution">
-      <p> Heart </p>
+      <p> Brain </p>
     </section>
     
   </div>
-  <button> <a href="./BrainModel.html">Brain Model</a> </button>
+  <button> <a href="./heartModel.html">Heart Model</a> </button>
   <!-- 💁 Include both scripts below to support all browsers! -->
 
   <!-- Loads <model-viewer> for modern browsers: -->
@@ -42,3 +42,4 @@
   <script type="module" src="https://modelviewer.dev/node_modules/@google/model-viewer/dist/model-viewer.min.js">
   </script>
 </body>
+</html>
