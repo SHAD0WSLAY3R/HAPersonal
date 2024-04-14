@@ -14,8 +14,8 @@ def generate_qr(url, filename):
     img.save(filename)
 
 # Generate QR code for the Brain model
-generate_qr('http://127.0.0.1:3000/BrainModel.html', '3D_Brain.png')
+generate_qr('https://humananatomy-ar.s3.amazonaws.com/BrainModel.html', '3D_Brain.png')
 # https://adobeaero.app.link/E8c8fzy7xIb
 # Generate QR code for the Heart model
-generate_qr('http://127.0.0.1:3000/heartModel.html', '3D_Heart.png')
+generate_qr('https://humananatomy-ar.s3.amazonaws.com/heartModel.html', '3D_Heart.png')
 # https://adobeaero.app.link/rILR04qdyIb

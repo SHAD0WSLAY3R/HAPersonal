@@ -15,14 +15,35 @@
         <p>Main page</p>
         <div class="qr-container">
             <figure>
-                <img src="3D_Brain.png" alt="Qr image - Brain">
+                <img id="3D_Brain" alt="Qr image - Brain">
                 <figcaption>3D AR Brain Model</figcaption>
             </figure>
             <figure>
-                <img src="3D_Heart.png" alt="Qr image - Heart">
+                <img id="3D_Heart" alt="Qr image - Heart">
                 <figcaption>3D AR Heart Model</figcaption>
             </figure>
         </div>
     </div>
 
+    <script>
+      function getimage(image_name, elementid) {
+        var x = document.getElementById(elementid);
+        fetch('https://aaddu2t5gh.execute-api.us-east-1.amazonaws.com/qrimage/' + image_name)
+            .then(response => response.text()) // Use .text() to read the response body as text
+            .then(data => {
+                // Directly set the image source to the base64 string
+                x.src = "data:image/png;base64," + data;
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }
+      
+      window.onload = function() {
+        getimage('brainModel', '3D_Brain');
+        getimage('heartModel', '3D_Heart');
+      };
+    </script>
+
   </body>
+  </html>
